@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEventActivity"
+    android:orientation="vertical"
+    android:background="#ffff00">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Event Information"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eeeeee"
+        android:layout_margin="8dp"
+        android:padding="12dp">
+
+        <TableRow>
+            <TextView
+                android:text="Name"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Place"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+
+            <EditText
+                android:id="@+id/etPlace"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Type"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"
+                android:layout_gravity="center_vertical"/>
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdIndoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Indoor"
+                    android:textSize="16dp"/>
+
+                <RadioButton
+                    android:id="@+id/rdOutdoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Outdoor"
+                    android:textSize="16dp"/>
+
+                <RadioButton
+                    android:id="@+id/rdOnline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Online"
+                    android:textSize="16dp"/>
+            </RadioGroup>
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:text="Date &amp; Time"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+
+            <EditText
+                android:id="@+id/etDateTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="datetime"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Capacity"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+
+            <EditText
+                android:id="@+id/etCapacity"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Budget"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etBudget"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Email"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Phone"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="phone"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Description"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+
+            <EditText
+                android:id="@+id/etDes"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:lines="3"/>
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/chkReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Reminder"
+            android:checked="false"/>
+
+        <LinearLayout
+            android:id="@+id/layoutReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reminder Time"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/etReminderTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:hint="Minutes before event"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvErrorMsg"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="Error message will be here"
+            android:textColor="#ff0000"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Cancel"
+            android:backgroundTint="#ffff00"
+            android:textColor="#000000"/>
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Share"
+            android:backgroundTint="#ffff00"
+            android:textColor="#000000"/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Save"
+            android:backgroundTint="#ffff00"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:orientation="vertical"
+    android:background="#ffff00">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Signup"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eeeeee"
+        android:layout_margin="8dp"
+        android:padding="12dp">
+
+        <TableRow
+            android:id="@+id/rowName">
+            <TextView
+                android:text="Name"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:hint="Enter 4-16 characters"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEmail">
+            <TextView
+                android:text="Email"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowPhone">
+            <TextView
+                android:text="Phone"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="phone"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="User ID"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etUserId"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:hint="Enter 4-8 characters"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Password"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="numberPassword"
+                android:hint="Enter 4-6 digits"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowRePass">
+            <TextView
+                android:text="Re-Password"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <EditText
+                android:id="@+id/etRePassword"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="numberPassword"
+                android:hint="Enter 4-6 digits"/>
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/chkRemUsedId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember User ID"/>
+        <CheckBox
+            android:id="@+id/chkRemLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember Login"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvToggleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp"/>
+            <TextView
+                android:id="@+id/btnToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#0000bb"
+                android:text="Login"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+    </TableLayout>
+
+    <!--    bottom panel-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Exit"
+            android:backgroundTint="#ffff00"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Go"
+            android:backgroundTint="#ffff00"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>
